@@ -4,12 +4,12 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>{{ config('app.name', 'Biblioteca') }}</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
-         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
         <!-- Styles / Scripts -->
         @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
@@ -59,7 +59,7 @@
             
             <!-- Botones de inicio y login para desktop -->
             <div class="hidden md:flex space-x-4">
-                <a href="#" class="px-4 py-2 bg-blue-700 text-white font-semibold rounded-lg hover:bg-blue-800 transition duration-300">Iniciar Sesión</a>
+                <a href="{{ route('login')}}" class="px-4 py-2 bg-blue-700 text-white font-semibold rounded-lg hover:bg-blue-800 transition duration-300">Iniciar Sesión</a>
                 <a href="#" class="px-4 py-2 border border-blue-700 text-blue-700 font-semibold rounded-lg hover:bg-blue-50 transition duration-300">Registrarse</a>
             </div>
             
