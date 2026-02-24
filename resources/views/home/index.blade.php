@@ -134,6 +134,10 @@
                                     
                                 </tbody>
                             </table>
+
+                            <div class="mt-4"> 
+                                {{ $libros->links() }} 
+
                         </div>
                     </section>
 

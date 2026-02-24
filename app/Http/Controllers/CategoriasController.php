@@ -9,7 +9,7 @@ class CategoriasController extends Controller
 {
     public function index()
     {
-        $categorias = Categoria::all();
+        $categorias = Categoria::paginate(2); //paginate para poner paginacion en la vista
         return view( 'categorias.index', compact('categorias'));
     }
 

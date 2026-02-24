@@ -40,6 +40,9 @@
                 @endforeach  
             </tbody>  
         </table>
+        <div class="mt-4">
+            {{ $categorias->links() }}
+            
     </div>
 </div> 
 
