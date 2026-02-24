@@ -54,15 +54,15 @@
                 <!-- Menú de navegación superior -->
                 <nav class="hidden md:block">
                     <ul class="flex space-x-6">
-                        <li><a href="#" class="nav-link hover:bg-blue-700 px-3 py-2 rounded transition" data-page="inicio">Inicio</a></li>
+                        <li><a href="{{ route('home') }}" class="nav-link hover:bg-blue-700 px-3 py-2 rounded transition" data-page="inicio">Inicio</a></li>
                         <li><a href="#" class="nav-link hover:bg-blue-700 px-3 py-2 rounded transition" data-page="usuarios">Usuarios</a></li>
                         <li><a href="#" class="nav-link hover:bg-blue-700 px-3 py-2 rounded transition" data-page="libros">Libros</a></li>
                         <li><a href="#" class="nav-link hover:bg-blue-700 px-3 py-2 rounded transition" data-page="prestamos">Préstamos</a></li>
                         <li><a href="#" class="nav-link hover:bg-red-500 px-3 py-2 rounded transition" data-page="salir">Salir</a></li>
                     </ul>
-                </nav>
+                </nav> 
                 
-                <!-- Perfil de usuario -->
+                <!-- Perfil de usuario --> 
                 <div class="flex items-center space-x-3">
                     <span class="hidden sm:inline">Administrador</span>
                     <div class="w-8 h-8 bg-blue-800 rounded-full flex items-center justify-center">
@@ -85,7 +85,7 @@
                     </h2>
                     <nav>
                         <ul class="space-y-2">
-                            <li><a href="#" class="sidebar-link block px-4 py-3 rounded hover:bg-gray-700 transition" data-page="inicio">
+                            <li><a href="{{ route('home') }}" class="sidebar-link block px-4 py-3 rounded hover:bg-gray-700 transition" data-page="inicio">
                                 <i class="fas fa-home mr-3"></i> Inicio
                             </a></li>
                             <li><a href="#" class="sidebar-link block px-4 py-3 rounded hover:bg-gray-700 transition" data-page="libros">
