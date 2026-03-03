@@ -135,7 +135,7 @@
                                 </tbody>
                             </table>
 
-                            <div class="mt-4"> 
+                            <div class="px-4 py-3 bg-gray-50 border-t flex items-center justify-between"> 
                                 {{ $libros->links() }} 
 
                         </div>
