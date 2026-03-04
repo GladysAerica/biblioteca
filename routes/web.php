@@ -21,11 +21,15 @@ Route::post('/register',[AuthController::class, 'register'])-> name('register');
    Route::get('/home',[HomeController::class,'index'])->name('home');
    Route::get('/logout',[AuthController::class,'logout'])->name('logout');
 
+  
+});
+
+Route::middleware(['auth', 'user_type:admin'])->group(function () {
    Route::get('/categorias',[CategoriasController::class,'index'])->name('categorias.index');
    Route::get('/categorias/create',[CategoriasController::class,'create'])->name('categorias.create');
    Route::post('/categorias/store',[CategoriasController::class,'store'])->name('categorias.store');
    Route::get('/categorias/{id}/edit',[CategoriasController::class,'edit'])->name('categorias.edit');
-    Route::put('/categorias/{id}',[CategoriasController::class,'update'])->name('categorias.update');
+   Route::put('/categorias/{id}',[CategoriasController::class,'update'])->name('categorias.update');
     Route::delete('/categorias/{id}',[CategoriasController::class,'destroy'])->name('categorias.destroy');
 
     Route::get('/libros/create',[LibrosController::class,'create'])->name('libros.create');
@@ -33,4 +37,7 @@ Route::post('/register',[AuthController::class, 'register'])-> name('register');
     Route::get('/libros/{id}/edit',[LibrosController::class,'edit'])->name('libros.edit');  
     Route::delete('/libros/{id}',[LibrosController::class,'destroy'])->name('libros.destroy');
     Route ::put('/libros/{id}',[LibrosController::class,'update'])->name('libros.update');
+});
+Route::middleware (['auth', 'user_type:user'])->group(function () {
+    
 });
