@@ -94,7 +94,7 @@
                             <li><a href="{{ route('usuarios.index') }}" class="sidebar-link block px-4 py-3 rounded hover:bg-gray-700 transition" data-page="usuarios">
                                 <i class="fas fa-users mr-3"></i> Usuarios
                             </a></li>
-                            <li><a href="#" class="sidebar-link block px-4 py-3 rounded hover:bg-gray-700 transition" data-page="prestamos">
+                            <li><a href="{{ route('prestamos.index') }}" class="sidebar-link block px-4 py-3 rounded hover:bg-gray-700 transition" data-page="prestamos">
                                 <i class="fas fa-exchange-alt mr-3"></i> Préstamos
                             </a></li>
                             <li>
