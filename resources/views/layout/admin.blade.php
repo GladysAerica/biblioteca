@@ -132,8 +132,12 @@
                 </div>
             </aside>
 
-            
-    @yield('content')
+            <main id="content" class="flex-1 p-6">
+                @yield('content')
+            </main>
+        </div>
 
-   @include('partials.auth.admin.footer')
-         
+        @include('partials.auth.admin.footer')
+    </div>
+</body>
+</html>

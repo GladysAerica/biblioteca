@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Categoria;
-use App\Models\Libros;
+use App\Models\Libro;
 
 class LibrosController extends Controller
 {
@@ -26,7 +26,7 @@ class LibrosController extends Controller
         ]);
 
         // Crear un nuevo libro
-        $libro = new Libros();
+        $libro = new Libro();
         $libro->nombre = $request->nombre;
         $libro->isbn = $request->isbn;
         $libro->autor = $request->autor;
@@ -40,7 +40,7 @@ class LibrosController extends Controller
 
     public function edit ($id)
     {
-        $libro = Libros::findOrFail($id);
+        $libro = Libro::findOrFail($id);
         $categorias = Categoria::all();
         return view('libros.edit', compact('libro', 'categorias'));
     }
@@ -57,7 +57,7 @@ class LibrosController extends Controller
         ]);
 
         // Encontrar el libro y actualizar sus datos
-        $libro = Libros::findOrFail($id);
+        $libro = Libro::findOrFail($id);
         $libro->nombre = $request->nombre;
         $libro->isbn = $request->isbn;
         $libro->autor = $request->autor;
@@ -71,7 +71,7 @@ class LibrosController extends Controller
  
     public function destroy ($id)
     {
-        $libro = Libros::findOrFail($id);
+        $libro = Libro::findOrFail($id);
         $libro->delete();
         return redirect()->route('home')->with('success', 'Libro eliminado exitosamente.');
     }

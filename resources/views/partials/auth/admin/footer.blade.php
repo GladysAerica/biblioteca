@@ -21,8 +21,6 @@
                 </div>
             </div>
         </footer>
-    </div>
-</div>
 
     <!-- JavaScript para funcionalidad interactiva -->
     <script>
