@@ -17,19 +17,21 @@
     
 
     <div class="bg-white shadow rounded-lg p-6">
-        <table class="min-w-full table-auto">
-            <thead>
+        <div class="overflow-x-auto">
+            <table class="w-full divide-y divide-gray-200">
+                <thead class="bg-gray-50">
                 <tr>
-                    <th class="px-4 py-2 border-b">ID</th>
-                    <th class="px-4 py-2 border-b">Nombre</th>
+                    <th class="py-6 px-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">ID</th>
+                    <th class="py-6 px-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">Nombre</th>
+                    <th class="py-6 px-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">Acciones</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="bg-white divide-y divide-gray-200">
                 @foreach($categorias as $categoria)
                 <tr>
-                    <td class="px-4 py-2 border-b">{{ $categoria->id }}</td>
-                    <td class="px-4 py-2 border-b">{{ $categoria->nombre }}</td>
-                    <td class="px-4 py-2 border-b text-center"> 
+                    <td class="px-6 py-4 whitespace-nowrap">{{ $categoria->id }}</td>
+                    <td class="px-6 py-4 whitespace-nowrap">{{ $categoria->nombre }}</td>
+                    <td class="px-6 py-4 whitespace-nowrap"> 
                     <a href="{{ route('categorias.edit', $categoria->id) }}" class="ml-4 inline-block bg-yellow-600 text-white px-3 py-1 rounded hover:bg-blue-700 transition">Editar</a>
                     <form action="{{ route('categorias.destroy', $categoria->id) }}" method="POST" class="inline-block">
                         @csrf
@@ -42,6 +44,8 @@
         </table>
         <div class="mt-4">
             {{ $categorias->links() }}
+        </div>
+        </div>
             
     </div>
 </div> 

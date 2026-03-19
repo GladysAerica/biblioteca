@@ -7,15 +7,15 @@
                     <!-- Sección de bienvenida -->
                     <section class="mb-8">
                         <h2 class="text-2xl font-bold text-gray-800 mb-2">Bienvenido al Panel de Administración</h2>
-                        <p class="text-gray-600">Gestiona los recursos de la biblioteca desde esta interfaz.</p>
+                        <p class="text-gray-700">Gestiona los recursos de la biblioteca.</p>
                     </section>
                     
                     <!-- Tarjetas de resumen -->
-                    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-                        <div class="bg-white p-6 rounded-lg shadow">
+                    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8 bg-yellow-600 p-6 rounded-lg shadow">
+                        <div class="bg-yellow-400 p-6 rounded-lg shadow">
                             <div class="flex items-center justify-between">
                                 <div>
-                                    <p class="text-gray-500 text-sm">Libros totales</p>
+                                    <p class="text-black-500 text-sm">Libros totales</p>
                                     <p class="text-2xl font-bold">2,548</p>
                                 </div>
                                 <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
@@ -23,15 +23,15 @@
                                 </div>
                             </div>
                             <div class="mt-4">
-                                <span class="text-green-600 text-sm font-medium"><i class="fas fa-arrow-up mr-1"></i> 5.2%</span>
-                                <span class="text-gray-500 text-sm ml-2">este mes</span>
+                                <span class="text-green-800 text-sm font-medium"><i class="fas fa-arrow-up mr-1"></i> 5.2%</span>
+                                <span class="text-black-500 text-sm ml-2">este mes</span>
                             </div>
                         </div>
                         
-                        <div class="bg-white p-6 rounded-lg shadow">
+                        <div class="bg-yellow-400 p-6 rounded-lg shadow">
                             <div class="flex items-center justify-between">
                                 <div>
-                                    <p class="text-gray-500 text-sm">Préstamos activos</p>
+                                    <p class="text-black-500 text-sm">Préstamos activos</p>
                                     <p class="text-2xl font-bold">187</p>
                                 </div>
                                 <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
@@ -40,14 +40,14 @@
                             </div>
                             <div class="mt-4">
                                 <span class="text-red-600 text-sm font-medium"><i class="fas fa-arrow-down mr-1"></i> 2.3%</span>
-                                <span class="text-gray-500 text-sm ml-2">este mes</span>
+                                <span class="text-black-500 text-sm ml-2">este mes</span>
                             </div>
                         </div>
                         
-                        <div class="bg-white p-6 rounded-lg shadow">
+                        <div class="bg-yellow-400 p-6 rounded-lg shadow">
                             <div class="flex items-center justify-between">
                                 <div>
-                                    <p class="text-gray-500 text-sm">Usuarios registrados</p>
+                                    <p class="text-black-500 text-sm">Usuarios registrados</p>
                                     <p class="text-2xl font-bold">523</p>
                                 </div>
                                 <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
@@ -55,15 +55,15 @@
                                 </div>
                             </div>
                             <div class="mt-4">
-                                <span class="text-green-600 text-sm font-medium"><i class="fas fa-arrow-up mr-1"></i> 8.7%</span>
-                                <span class="text-gray-500 text-sm ml-2">este mes</span>
+                                <span class="text-green-800 text-sm font-medium"><i class="fas fa-arrow-up mr-1"></i> 8.7%</span>
+                                <span class="text-black-500 text-sm ml-2">este mes</span>
                             </div>
                         </div>
                         
-                        <div class="bg-white p-6 rounded-lg shadow">
+                        <div class="bg-yellow-400 p-6 rounded-lg shadow">
                             <div class="flex items-center justify-between">
                                 <div>
-                                    <p class="text-gray-500 text-sm">Libros vencidos</p>
+                                    <p class="text-black-500 text-sm">Libros vencidos</p>
                                     <p class="text-2xl font-bold">14</p>
                                 </div>
                                 <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
@@ -71,17 +71,17 @@
                                 </div>
                             </div>
                             <div class="mt-4">
-                                <span class="text-green-600 text-sm font-medium"><i class="fas fa-arrow-down mr-1"></i> 12.5%</span>
-                                <span class="text-gray-500 text-sm ml-2">este mes</span>
+                                <span class="text-green-800 text-sm font-medium"><i class="fas fa-arrow-down mr-1"></i> 12.5%</span>
+                                <span class="text-black-500 text-sm ml-2">este mes</span>
                             </div>
                         </div>
                     </section>
 
                     <!-- Tabla de préstamos recientes -->
-                    <section class="bg-white rounded-lg shadow p-9">
+                    <section class="bg-yellow-200 rounded-lg shadow p-9">
                         <div class="flex  justify-between items-center">
-                            <h2 class="text-xl font-bold text-gray-800">Listas de Libros</h2>
-                            <a href="{{ route('libros.create') }}" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                            <h2 class="text-xl font-bold text-black-800">Listas de Libros</h2>
+                            <a href="{{ route('libros.create') }}" class="bg-blue-400 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
                                 <i class="fas fa-plus mr-2"></i> Nuevo Libro
                             </a>
                         </div>
@@ -101,27 +101,38 @@
  -->
 
                         <div class="overflow-x-auto">
-                            <table class="w-full text-left">
+                            <table class="w-full divide-y divide-gray-200">
                                 <thead class="bg-gray-50">
                                     <tr>
-                                        <th class="py-3 px-4 font-semibold text-gray-700">Nombre</th>
-                                        <th class="py-3 px-4 font-semibold text-gray-700">ISBN</th>
-                                        <th class="py-3 px-4 font-semibold text-gray-700">Autor</th>
-                                        <th class="py-3 px-4 font-semibold text-gray-700">Editorial</th>
-                                        <th class="py-3 px-4 font-semibold text-gray-700">Categoria</th>
+                                        <th class="py-6 px-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">Nombre</th>
+                                        <th class="py-6 px-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">ISBN</th>
+                                        <th class="py-6 px-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">Autor</th>
+                                        <th class="py-6 px-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">Editorial</th>
+                                        <th class="py-6 px-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">Categoria</th>
                                     </tr>
                                 </thead>
-                                <tbody class="border-t hover:bg-gray-50">
+                                <tbody class="bg-white divide-y divide-gray-200">
                                     @foreach ($libros as $libro) 
                                     <tr>
-                                        <td class="py-3 px-4">{{ $libro->nombre }}</td> 
-                                        <td class="py-3 px-4">{{ $libro->isbn }}</td>
-                                        <td class="py-3 px-4">{{ $libro->autor }}</td>
-                                        
-                                        <td class="py-3 px-4">{{ $libro->editorial }}</td>
-                                        <td class="py-3 px-4">{{ $libro->categoria->nombre }}</td>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <div class="font-medium text-gray-900">{{ $libro->nombre }}</td> 
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <div class="font-medium text-gray-900">{{ $libro->isbn }}</td>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <div class="font-medium text-gray-900">{{ $libro->autor }}</td>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <div class="font-medium text-gray-900">{{ $libro->editorial }}</td>
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            <div class="font-medium text-gray-900">{{ $libro->categoria->nombre }}</td>
 
-
+                                        <td class="px-6 py-4 whitespace-nowrap">
+                                            @if($libro->estatus==0)
+                                                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Disponible</span>
+                                            @else
+                                                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800">Prestado</span>
+                                            @endif
+                                        </td>
+                                            
                                         <td class = "px-4 py-3 whitespace-nowrap text-sm font-medium">
                                             <a href="{{ route('libros.edit', $libro->id) }}" class="text-indigo-600 hover:text-indigo-900">Editar</a>
                                             <form action="{{ route('libros.destroy', $libro->id) }}" method="POST" class="inline">

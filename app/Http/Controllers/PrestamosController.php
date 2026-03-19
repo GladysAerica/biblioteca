@@ -43,7 +43,7 @@ class PrestamosController extends Controller
     public function select_libro (Request $request) {
         $usuario_id = $request->input('usuario_id');
         $usuario = User::findOrFail($usuario_id);
-        $libros = Libro::all();
+        $libros = Libro::where ('estatus', 0)-> orderBy('id', 'asc')->get();
 
         return view('prestamos.select_libro', compact('usuario','libros'));
     }

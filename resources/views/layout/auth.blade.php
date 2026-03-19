@@ -14,10 +14,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Open Sans', sans-serif;
+            font-family: 'Calibri', sans-serif;
         }
         h1, h2, h3, h4 {
-            font-family: 'Merriweather', serif;
+            font-family: 'Calibri', serif;
         }
         .form-container {
             max-width: 450px;

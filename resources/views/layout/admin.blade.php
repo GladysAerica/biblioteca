@@ -34,11 +34,11 @@
         }
     </style>
 </head>
-<body class="bg-gray-100">
+<body class="bg-yellow-100">
     <!-- Contenedor principal -->
     <div class="flex flex-col min-h-screen">
         <!-- Header -->
-        <header class="bg-blue-600 text-white shadow-lg">
+        <header class="bg-yellow-600 text-white shadow-lg">
             <div class="flex items-center justify-between px-4 py-3">
                 <!-- Logo y título -->
                 <div class="flex items-center space-x-3">
@@ -47,25 +47,26 @@
                     </button>
                     <div class="flex items-center space-x-2">
                         <i class="fas fa-book text-2xl"></i>
-                        <h1 class="text-xl font-bold">Admin Biblioteca</h1>
+                        <h1 class="text-xl font-bold">Biblioteca Gladi</h1>
                     </div>
                 </div>
                 
                 <!-- Menú de navegación superior -->
                 <nav class="hidden md:block">
                     <ul class="flex space-x-6">
-                        <li><a href="{{ route('home') }}" class="nav-link hover:bg-blue-700 px-3 py-2 rounded transition" data-page="inicio">Inicio</a></li>
-                        <li><a href="{{ route('usuarios.index') }}" class="nav-link hover:bg-blue-700 px-3 py-2 rounded transition" data-page="usuarios">Usuarios</a></li>
-                        <li><a href="#" class="nav-link hover:bg-blue-700 px-3 py-2 rounded transition" data-page="libros">Libros</a></li>
-                        <li><a href="#" class="nav-link hover:bg-blue-700 px-3 py-2 rounded transition" data-page="prestamos">Préstamos</a></li>
-                        <li><a href="{{ route('logout') }}" class="nav-link hover:bg-red-500 px-3 py-2 rounded transition" data-page="salir">Salir</a></li>
+                        <li><a href="{{ route('home') }}" class="block px-4 py-3 rounded hover:bg-yellow-800 transition">Inicio</a></li>
+                        <li><a href="{{ route('usuarios.index') }}" class="block px-4 py-3 rounded hover:bg-yellow-800 transition">Usuarios</a></li>
+                        <li><a href="#" class="block px-4 py-3 rounded hover:bg-yellow-800 transition">Libros</a></li>
+                        <li><a href="{{ route('prestamos.index') }}" class="block px-4 py-3 rounded hover:bg-yellow-800 transition">Préstamos</a></li>
+                        <li><a href="{{ route('categorias.index') }}" class="block px-4 py-3 rounded hover:bg-yellow-800 transition">Categorias</a></li>
+                        <li><a href="{{ route('logout') }}" class="sidebar-link block px-4 py-3 rounded hover:bg-red-600 transition" data-page="salir">Salir</a></li>
                     </ul>
                 </nav> 
                 
                 <!-- Perfil de usuario --> 
                 <div class="flex items-center space-x-3">
                     <span class="hidden sm:inline">Administrador</span>
-                    <div class="w-8 h-8 bg-blue-800 rounded-full flex items-center justify-center">
+                    <div class="w-8 h-8 bg-yellow-700 rounded-full flex items-center justify-center">
                         <i class="fas fa-user"></i>
                     </div>
                 </div>
@@ -78,27 +79,35 @@
             <div id="sidebar-overlay" class="fixed inset-0 z-10 sidebar-overlay md:hidden" style="display: none;"></div>
             
             <!-- Sidebar -->
-            <aside id="sidebar" class="mobile-menu-hidden sidebar-transition fixed md:relative z-20 w-64 bg-gray-800 text-white flex-shrink-0 h-full md:h-auto">
+            <aside id="sidebar" class="mobile-menu-hidden sidebar-transition fixed md:relative z-20 w-64 bg-yellow-500 text-white flex-shrink-0 h-full md:h-auto">
                 <div class="p-5">
                     <h2 class="text-lg font-semibold mb-6 flex items-center">
                         <i class="fas fa-book-open mr-2"></i> Menú de Navegación
                     </h2>
                     <nav>
                         <ul class="space-y-2">
-                            <li><a href="{{ route('home') }}" class="sidebar-link block px-4 py-3 rounded hover:bg-gray-700 transition" data-page="inicio">
-                                <i class="fas fa-home mr-3"></i> Inicio
-                            </a></li>
-                            <li><a href="#" class="sidebar-link block px-4 py-3 rounded hover:bg-gray-700 transition" data-page="libros">
-                                <i class="fas fa-book mr-3"></i> Libros
-                            </a></li>
-                            <li><a href="{{ route('usuarios.index') }}" class="sidebar-link block px-4 py-3 rounded hover:bg-gray-700 transition" data-page="usuarios">
-                                <i class="fas fa-users mr-3"></i> Usuarios
-                            </a></li>
-                            <li><a href="{{ route('prestamos.index') }}" class="sidebar-link block px-4 py-3 rounded hover:bg-gray-700 transition" data-page="prestamos">
-                                <i class="fas fa-exchange-alt mr-3"></i> Préstamos
-                            </a></li>
                             <li>
-                                <a href="{{ route('categorias.index') }}"class="block px-4 py-3 rounded hover:bg-gray-700 transition">
+                                <a href="{{ route('home') }}" class="block px-4 py-3 rounded hover:bg-yellow-800 transition">
+                                <i class="fas fa-home mr-3"></i> Inicio
+                            </a>
+                        </li>
+                            <li> 
+                                <a href="#" class="sidebar-link block px-4 py-3 rounded hover:bg-yellow-800 transition" data-page="libros">
+                                <i class="fas fa-book mr-3"></i> Libros
+                            </a>
+                        </li>
+                            <li>
+                                <a href="{{ route('usuarios.index') }}" class="block px-4 py-3 rounded hover:bg-yellow-800 transition">
+                                <i class="fas fa-users mr-3"></i> Usuarios
+                            </a>
+                        </li>
+                            <li>
+                                <a href="{{ route('prestamos.index') }}" class="block px-4 py-3 rounded hover:bg-yellow-800 transition">
+                                    <i class="fas fa-folder mr-3"></i> Préstamos
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('categorias.index') }}"class="block px-4 py-3 rounded hover:bg-yellow-800 transition">
                                     <i class="fas fa-tags mr-3"></i> Categorias
                                 </a>
                             </li><!-- MOVIFIQUE LO DE CATEGORIAS -->
@@ -112,7 +121,7 @@
                     </nav>
                     
                     <!-- Información adicional en el sidebar -->
-                    <div class="mt-10 p-4 bg-gray-900 rounded-lg">
+                    <div class="mt-10 p-4 bg-yellow-600 rounded-lg">
                         <h3 class="font-medium text-sm mb-2">Estadísticas rápidas</h3>
                         <div class="space-y-2 text-sm">
                             <div class="flex justify-between">
