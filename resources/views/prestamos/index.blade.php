@@ -24,6 +24,7 @@
             <th class="py-6 px-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">Usuario</th>
             <th class="py-6 px-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">Fecha</th>
             <th class="py-6 px-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">Estatus</th>
+            <th class="py-6 px-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">Fecha Entrega</th>
             <th class="py-6 px-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">Acciones</th>
         </tr>
     </thead>
@@ -33,14 +34,15 @@
             <td class="px-6 py-4 whitespace-nowrap">{{ $prestamo->id }}</td>
             <td class="px-6 py-4 whitespace-nowrap">{{ optional($prestamo->libro)->nombre ?? '—' }}</td> <!--se modifico esto y el de abajo para que me diera el nombre en prestamos -->
             <td class="px-6 py-4 whitespace-nowrap">{{ optional($prestamo->usuario)->name ?? '—' }}</td>
-            <td class="px-6 py-4 whitespace-nowrap">{{ $prestamo->created_at->format ('d/m/Y') }}</td>
+            <td class="px-6 py-4 whitespace-nowrap">{{ $prestamo->created_at->format ('Y-m-d') }}</td>
             <td class="px-6 py-4 whitespace-nowrap">
-                 @if($prestamo->estado == 'Pendiente')
+                 @if($prestamo->estado == 'pendiente')
                     <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800">Pendiente</span>
                  @else
                     <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Entregado</span>
                  @endif
             </td>
+            <td class="px-6 py-4 whitespace-nowrap">{{ $prestamo->fecha_entrega ? $prestamo->fecha_entrega : ' '}}</td>
             <td class="px-6 py-4 whitespace-nowrap">
                 @if ($prestamo->estado == 'pendiente') 
                 <a href="{{ route ('prestamos.entregar', $prestamo->id)}}" class="mb-4 inline-block bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition">Entregar</a>

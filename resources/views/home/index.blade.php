@@ -81,7 +81,7 @@
                     <section class="bg-yellow-200 rounded-lg shadow p-9">
                         <div class="flex  justify-between items-center">
                             <h2 class="text-xl font-bold text-black-800">Listas de Libros</h2>
-                            <a href="{{ route('libros.create') }}" class="bg-blue-400 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                            <a href="{{ route('libros.create') }}" class="bg-blue-800 text-white px-4 py-2 rounded-lg hover:bg-blue-900 transition">
                                 <i class="fas fa-plus mr-2"></i> Nuevo Libro
                             </a>
                         </div>
@@ -104,11 +104,13 @@
                             <table class="w-full divide-y divide-gray-200">
                                 <thead class="bg-gray-50">
                                     <tr>
-                                        <th class="py-6 px-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">Nombre</th>
-                                        <th class="py-6 px-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">ISBN</th>
-                                        <th class="py-6 px-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">Autor</th>
-                                        <th class="py-6 px-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">Editorial</th>
-                                        <th class="py-6 px-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">Categoria</th>
+                                        <th class="py-6 px-4 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">Nombre</th>
+                                        <th class="py-6 px-4 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">ISBN</th>
+                                        <th class="py-6 px-4 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">Autor</th>
+                                        <th class="py-6 px-4 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">Editorial</th>
+                                        <th class="py-6 px-4 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">Categoria</th>
+                                        <th class="py-6 px-4 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">Estatus</th>
+                                        <th class="py-6 px-4 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">Acciones</th>
                                     </tr>
                                 </thead>
                                 <tbody class="bg-white divide-y divide-gray-200">
@@ -146,7 +148,7 @@
                                 </tbody>
                             </table>
 
-                            <div class="px-4 py-3 bg-gray-50 border-t flex items-center justify-between"> 
+                            <div class="px-4 py-2 bg-gray-100 border-t flex items-center justify-between"> 
                                 {{ $libros->links() }} 
 
                         </div>
