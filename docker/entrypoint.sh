@@ -9,8 +9,12 @@ sleep 3
 #generar key si no existe
 #php artisan key:generate --force
 
+
+# Cambia esto temporalmente para limpiar los nombres mal escritos
+php artisan migrate:fresh --force
+
 #migraciones (opcional)
-php artisan migrate --force
+#php artisan migrate --force
 
 #cachear config
 php artisan config:clear
