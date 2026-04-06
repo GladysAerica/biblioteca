@@ -11,6 +11,9 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
+        // --- AGREGA ESTA LÍNEA AQUÍ ---
+        $middleware->trustProxies(at: '*');
+        
         $middleware->alias([
             'user_type' => App\Http\Middleware\UserType::class,
         ]);

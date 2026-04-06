@@ -11,7 +11,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        // Esto obliga a que todos los formularios y links usen HTTPS
+        if (config('app.env') === 'production') { 
+            URL::forceScheme('https');
+        }
+        
     }
 
     /**

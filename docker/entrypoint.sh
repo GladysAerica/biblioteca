@@ -13,6 +13,7 @@ sleep 3
 # Cambia esto temporalmente para limpiar los nombres mal escritos
 php artisan migrate:fresh --force
 
+
 #migraciones (opcional)
 #php artisan migrate --force
 
