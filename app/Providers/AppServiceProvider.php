@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+// 1. ESTA LÍNEA ES OBLIGATORIA (La que faltaba en el log)
+use Illuminate\Support\Facades\URL; 
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -11,11 +13,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        // Esto obliga a que todos los formularios y links usen HTTPS
-        if (config('app.env') === 'production') { 
-            URL::forceScheme('https');
-        }
-        
+        //
     }
 
     /**
@@ -23,6 +21,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        // 2. LA LÓGICA DEBE IR AQUÍ EN EL MÉTODO BOOT
+        if (config('app.env') === 'production') { 
+            URL::forceScheme('https');
+        }
     }
 }
