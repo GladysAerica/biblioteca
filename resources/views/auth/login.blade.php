@@ -26,7 +26,7 @@
                         <p class="text-gray-600">Accede a tu cuenta de la biblioteca</p>
                     </div>
                     
-                    <form id="loginForm" action="{{ route('login.post') }}" method="POST" class="space-y-6">
+                    <form id="loginForm" action="{{ route('login') }}" method="POST" class="space-y-6">
                         @csrf  <!-- SE AÑADIOOOO -->
                         <!-- Campo de Email -->
                         <div>

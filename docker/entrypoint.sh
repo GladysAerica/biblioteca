@@ -23,8 +23,14 @@ php artisan migrate --force
 #migraciones (opcional)
 #php artisan migrate --force
 
+
+
 #cachear config
 php artisan config:clear
+php artisan cache:clear
+php artisan route:clear
+php artisan view:clear
+
 php artisan config:cache
 php artisan route:cache
 php artisan view:cache

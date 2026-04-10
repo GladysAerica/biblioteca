@@ -14,7 +14,7 @@ Route::get('/', function () {
 });
 
 Route::get ('/login',[AuthController::class, 'loginForm'])-> name('login'); 
-Route::post('/login', [AuthController::class,'login'])->name('login.post');  #lo cambia a login.post pero era login
+Route::post('/login', [AuthController::class,'login'])->name('login');  #lo cambia a login.post pero era login
 Route::post('/register',[AuthController::class, 'register'])-> name('register');
 
 #agrupa rutas con Auth
