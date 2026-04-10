@@ -7,7 +7,7 @@ use App\Models\Categoria;
 
 class Libro extends Model
 {
-    protected $table = 'libro';
+    protected $table = 'libros';
 
     public function categoria()
     {
