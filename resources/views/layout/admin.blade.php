@@ -52,25 +52,25 @@
                 </div>
                 
                 <!-- Menú de navegación superior -->
-                <nav class="hidden md:block">
+                <nav class="hidden md:block text-left">
                     <ul class="flex space-x-6">
-                        <li><a href="{{ route('home') }}" class="block px-4 py-3 rounded hover:bg-yellow-800 transition">Inicio</a></li>
-                        <li><a href="{{ route('usuarios.index') }}" class="block px-4 py-3 rounded hover:bg-yellow-800 transition">Usuarios</a></li>
-                        <li><a href="#" class="block px-4 py-3 rounded hover:bg-yellow-800 transition">Libros</a></li>
-                        <li><a href="{{ route('prestamos.index') }}" class="block px-4 py-3 rounded hover:bg-yellow-800 transition">Préstamos</a></li>
-                        <li><a href="{{ route('categorias.index') }}" class="block px-4 py-3 rounded hover:bg-yellow-800 transition">Categorias</a></li>
+                        <li><a href="{{ route('home') }}" class="block px-4 py-3 rounded hover:bg-yellow-800 transition text-center">Inicio</a></li>
+                        <li><a href="{{ route('usuarios.index') }}" class="block px-4 py-3 rounded hover:bg-yellow-800 transition text-center">Usuarios</a></li>
+                        <li><a href="#" class="block px-4 py-3 rounded hover:bg-yellow-800 transition text-center">Libros</a></li>
+                        <li><a href="{{ route('prestamos.index') }}" class="block px-4 py-3 rounded hover:bg-yellow-800 transition text-center">Préstamos</a></li>
+                        <li><a href="{{ route('categorias.index') }}" class="block px-4 py-3 rounded hover:bg-yellow-800 transition text-center">Categorias</a></li>
                         <li><a href="{{ route('logout') }}" class="sidebar-link block px-4 py-3 rounded hover:bg-red-600 transition" data-page="salir">Salir</a></li>
                     </ul>
                 </nav> 
                 
                 <!-- Perfil de usuario --> 
                 <div class="flex items-center space-x-3">
-                    <span class="hidden sm:inline">Administrador</span>
+                    <span class="hidden sm:inline"></span>
                     <div class="w-8 h-8 bg-yellow-700 rounded-full flex items-center justify-center">
                         <i class="fas fa-user"></i>
                     </div>
                 </div>
-            </div>
+            </div> 
         </header>
 
         <!-- Contenido principal y sidebar -->
@@ -120,8 +120,21 @@
                         </ul>
                     </nav>
                     
+                    <div class="p-4 border-t border-gray-700">
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-yellow-700 rounded-full flex items-center justify-center">
+                                <span class="font-bold"> {{ strtoupper(substr(auth()->user()->name, 0, 1)) }}</span>
+                            </div> 
+                            <div class="ml-3">
+                                <p class="font-medium"><a href="{{route('usuarios.profile')}}">{{ auth()->user()->name }}</a></p>
+                                <p class="text-xs text-gray-800">{{ auth()->user()->email }}</p>
+                            </div> 
+                        </div>
+                    </div>
+                
+
                     <!-- Información adicional en el sidebar -->
-                    <div class="mt-10 p-4 bg-yellow-600 rounded-lg">
+                    <!-- <div class="mt-10 p-4 bg-yellow-600 rounded-lg">
                         <h3 class="font-medium text-sm mb-2">Estadísticas rápidas</h3>
                         <div class="space-y-2 text-sm">
                             <div class="flex justify-between">
@@ -137,7 +150,7 @@
                                 <span class="font-bold">156</span>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
             </aside>
 

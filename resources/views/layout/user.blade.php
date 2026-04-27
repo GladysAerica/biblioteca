@@ -99,6 +99,18 @@
                             </li>
                         </ul>
                     </nav>
+
+                    <div class="p-4 border-t border-gray-700">
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-yellow-700 rounded-full flex items-center justify-center">
+                                <span class="font-bold"> {{ strtoupper(substr(auth()->user()->name, 0, 1)) }}</span>
+                            </div>
+                            <div class="ml-3">
+                                <p class="font-medium">{{ auth()->user()->name }}</p>
+                                <p class="text-xs text-gray-800">{{ auth()->user()->email }}</p>
+                            </div> 
+                        </div>
+                    </div>
                     
                     <!-- Información adicional en el sidebar -->
                     <div class="mt-10 p-4 bg-gray-900 rounded-lg">

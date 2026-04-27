@@ -14,7 +14,7 @@ class HomeController extends Controller
     {
         $user = auth()->user();
         if ($user->user_type === 'admin') {
-            $libros = Libro::paginate(5);
+            $libros = Libro::with('categoria')->paginate(5);
             $total_libros = Libro::count();
             $libros_prestados = Libro::where('estatus', 1)->count();
             $total_usuarios = User::count();
